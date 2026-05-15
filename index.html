@@ -41,7 +41,7 @@
         .btn-form { background: #0D5BD7; color: white; width: 100%; padding: 16px; margin-top: 20px; font-size: 16px; }
         .btn-form:hover { background: #0041a3; }
         
-        /* Fixed Hero Top Badge Style & Spacing */
+        /* Hero Top Badge Style */
         .hero-badge { 
             display: inline-block;
             background: rgba(255, 255, 255, 0.12); 
@@ -89,19 +89,34 @@
         .card p { color: #475569; font-size: 15px; }
         .card-icon { font-size: 36px; color: #0D5BD7; margin-bottom: 20px; }
         
-        /* Project Showcase */
+        /* Project Showcase Grid Layout */
         .showcase-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
-        .project-item { position: relative; border-radius: 16px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .project-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .project-item { position: relative; border-radius: 16px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); background: #E2E8F0; }
+        .project-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; display: block; }
         .project-item:hover img { transform: scale(1.05); }
         .project-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(11, 35, 69, 0.95)); color: white; }
         .project-overlay h4 { color: white; font-size: 16px; margin-bottom: 3px; font-weight: 700; }
         .project-overlay p { font-size: 13px; opacity: 0.9; }
         
-        /* Organized Reviews Section Layout (No Empty Space Layout) */
+        /* Advanced Premium Masonry Review Layout */
         .reviews-section { background: #F8FAFC; }
-        .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; align-items: start; }
-        .review-card { background: white; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); height: fit-content; }
+        .reviews-container { 
+            column-count: 3; 
+            column-gap: 25px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+        .review-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 16px; 
+            border: 1px solid #E2E8F0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02); 
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 25px;
+            break-inside: avoid;
+        }
         .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
         .reviewer-info h4 { font-size: 16px; color: #0B2345; font-weight: 700; line-height: 1.2; }
         .reviewer-info span { font-size: 13px; color: #64748B; margin-top: 2px; display: inline-block; }
@@ -138,8 +153,11 @@
             .truck-photo { width: 100%; max-width: 400px; }
             .truck-callout-content { text-align: center; }
             .section { padding: 70px 20px; }
-            .reviews-grid { grid-template-columns: 1fr; }
+            .reviews-container { column-count: 2; }
             .team-photo { height: 260px; }
+        }
+        @media(max-width: 640px){
+            .reviews-container { column-count: 1; }
         }
     </style>
 </head>
@@ -208,12 +226,10 @@
             <h3>Honest Communication</h3>
             <p>From permit pulls to cleanup, we keep you informed every single step of the project with zero surprise fees.</p>
         </div>
-        <div class="grid cards-grid">
-            <div class="card">
-                <div class="card-icon">3</div>
-                <h3>Long-Term Results</h3>
-                <p>Our work is built to last and guaranteed to pass all code inspections, giving you permanent peace of mind.</p>
-            </div>
+        <div class="card">
+            <div class="card-icon">3</div>
+            <h3>Long-Term Results</h3>
+            <p>Our work is built to last and guaranteed to pass all code inspections, giving you permanent peace of mind.</p>
         </div>
     </div>
 </section>
@@ -223,42 +239,42 @@
     <p class="section-subtitle">Real on-the-job completions by the Cluck Plumbing team.</p>
     <div class="grid showcase-grid">
         <div class="project-item">
-            <img src="bathroom.jpg" alt="Custom bathroom shower installation">
+            <img src="assets/bathroom.jpg" alt="Custom bathroom shower installation">
             <div class="project-overlay">
                 <h4>Custom Shower Installation</h4>
                 <p>Design & Build Remodel</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="main water service.jpg" alt="Large scale water service installation">
+            <img src="assets/main water service.jpg" alt="Large scale water service installation">
             <div class="project-overlay">
                 <h4>Main Water Service</h4>
                 <p>500 LF Expertly Installed</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="wood sink.jpg" alt="Sink drain relocation and functionality update">
+            <img src="assets/wood sink.jpg" alt="Sink drain relocation and functionality update">
             <div class="project-overlay">
                 <h4>Sink Drain Functionality</h4>
                 <p>Precision Relocation Update</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="bathtub.jpg" alt="Finished walk-in shower conversion project">
+            <img src="assets/bathtub.jpg" alt="Finished walk-in shower conversion project">
             <div class="project-overlay">
                 <h4>Walk-In Shower Conversion</h4>
                 <p>Tub Replacement Upgrade</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="green sink.jpg" alt="Green sink installation update">
+            <img src="assets/green sink.jpg" alt="Green sink installation update">
             <div class="project-overlay">
                 <h4>Green Sink Update</h4>
                 <p>Energy & Style Refined</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="shower head.jpg" alt="Precision modern shower head installation">
+            <img src="assets/shower head.jpg" alt="Precision modern shower head installation">
             <div class="project-overlay">
                 <h4>Precision Shower Head</h4>
                 <p>Reliable & Efficient Work</p>
@@ -271,7 +287,7 @@
     <h2>What Your NWA Neighbors Say</h2>
     <p class="section-subtitle">Read verified customer reviews from home and business owners across Northwest Arkansas.</p>
     
-    <div class="grid reviews-grid">
+    <div class="reviews-container">
         <div class="review-card">
             <div class="review-header">
                 <div class="reviewer-info">
@@ -386,15 +402,15 @@
             <a href="tel:4797893138" class="btn btn-call">📞 Tap to Call (479) 789-3138</a>
         </div>
         <div class="team-photo-column">
-            <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
-            <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
+            <img src="assets/owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
+            <img src="assets/employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
         </div>
     </div>
 </section>
 
 <section class="section text-center" style="padding-top: 0;">
     <div class="truck-callout">
-        <img src="clucking car.jpg" alt="Official Cluck Plumbing service truck" class="truck-photo">
+        <img src="assets/clucking car.jpg" alt="Official Cluck Plumbing service truck" class="truck-photo">
         <div class="truck-callout-content">
             <h3>When you see this truck, help is here.</h3>
             <p>Our fully stocked service vehicles arrive ready to handle any plumbing need—from flange replacement to main water line installs—fast, professionally, and always code-compliant.</p>
