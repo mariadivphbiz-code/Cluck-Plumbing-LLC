@@ -1,270 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cluck Plumbing LLC | Northwest Arkansas Plumbing</title>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#071f3f;background:#fff;line-height:1.6}
-a{text-decoration:none}
-img{width:100%;display:block;object-fit:cover}
-.container{width:min(1180px,90%);margin:auto}
-header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:99}
-.nav{height:76px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:24px;font-weight:800;color:#071f3f}
-.btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700}
-.blue{background:#0757d8;color:#fff}
-.green{background:#22c55e;color:#fff}
-.white{background:#fff;color:#071f3f}
-
-.hero{
-min-height:720px;
-display:flex;
-align-items:center;
-color:white;
-background:linear-gradient(90deg,rgba(6,31,63,.95),rgba(6,31,63,.75),rgba(6,31,63,.25)),url("assets/clucking car.jpg") center/cover no-repeat;
-}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.badge{display:inline-block;background:rgba(255,255,255,.15);padding:10px 16px;border-radius:999px;font-weight:700;margin-bottom:24px}
-h1{font-size:clamp(42px,6vw,82px);line-height:.98;margin-bottom:24px}
-.hero p{font-size:20px;color:rgba(255,255,255,.88);margin-bottom:30px}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
-.hero-card{background:white;padding:16px;border-radius:28px;transform:rotate(1deg)}
-.hero-card img{height:430px;border-radius:20px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stat{background:rgba(255,255,255,.15);padding:16px;border-radius:16px}
-.stat strong{display:block;font-size:25px}
-
-section{padding:90px 0}
-.light{background:#f7f9fc}
-.section-head{text-align:center;max-width:780px;margin:0 auto 48px}
-h2{font-size:clamp(34px,4vw,52px);line-height:1.1;margin-bottom:14px}
-.section-head p,.card p,.feature p{color:#5f6b7a;font-size:17px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:white;border:1px solid #e7ecf2;border-radius:24px;padding:30px;box-shadow:0 14px 35px rgba(6,31,63,.06)}
-.card h3{font-size:22px;margin-bottom:12px}
-.feature{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-.feature img{height:560px;border-radius:30px}
-.check{margin-top:18px}
-.check strong{color:#071f3f}
-
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.project{position:relative;min-height:260px;border-radius:22px;overflow:hidden}
-.project.large{grid-column:span 2;grid-row:span 2;min-height:536px}
-.project img{height:100%}
-.label{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(6,31,63,.9);color:white;padding:14px;border-radius:14px;font-weight:800}
-
-.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.review-card{background:white;border:1px solid #e7ecf2;border-radius:22px;padding:14px;box-shadow:0 12px 26px rgba(6,31,63,.07)}
-.review-card img{border-radius:16px;object-position:top}
-
-.cta{
-color:white;
-background:linear-gradient(rgba(6,31,63,.92),rgba(6,31,63,.92)),url("assets/team working.jpg") center/cover no-repeat;
-}
-.cta-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-.cta p{color:rgba(255,255,255,.82);font-size:18px;margin-bottom:26px}
-form{background:white;color:#071f3f;border-radius:28px;padding:34px}
-input,select,textarea{width:100%;padding:15px;border:1px solid #cfd8e3;border-radius:12px;margin-bottom:14px;font-size:16px}
-textarea{height:120px}
-button{border:none;width:100%;cursor:pointer;font-size:16px}
-
-footer{background:#061426;color:white;text-align:center;padding:44px 0}
-footer p{color:rgba(255,255,255,.7);margin-top:8px}
-
-@media(max-width:900px){
-.hero-grid,.feature,.cta-wrap{grid-template-columns:1fr}
-.hero-card{display:none}
-.grid,.reviews{grid-template-columns:1fr 1fr}
-.gallery{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-.grid,.reviews,.gallery,.stats{grid-template-columns:1fr}
-.project.large{grid-column:span 1;min-height:320px}
-.logo{font-size:18px}
-.btn{padding:12px 14px}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluck Plumbing LLC | Local Plumber | Northwest Arkansas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F8FAFC;
+            color: #111827;
+            line-height: 1.6;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 { color: #0B2345; font-weight: 800; letter-spacing: -0.5px; }
+        h2 { font-size: 36px; margin-bottom: 15px; text-align: center; }
+        .section-subtitle { text-align: center; color: #475569; font-size: 18px; max-width: 600px; margin: 0 auto 50px; }
+        
+        /* Helper Classes */
+        .grid { display: grid; gap: 30px; }
+        .section { max-width: 1200px; margin: auto; padding: 100px 20px; }
+        .text-center { text-align: center; }
+        .flex { display: flex; gap: 15px; flex-wrap: wrap; }
+        
+        /* Buttons & Pills */
+        .btn { padding: 16px 32px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
+        .btn-call { background: #22C55E; color: white; } /* Emerald Green */
+        .btn-call:hover { background: #16a34a; }
+        .btn-form { background: #0D5BD7; color: white; width: 100%; margin-top: 20px; } /* Bright Royal */
+        .btn-form:hover { background: #0041a3; }
+        .pill { background: #475569; color: white; padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+        
+        /* Navigation */
+        .navbar { background: white; padding: 15px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 22px; color: #0B2345; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        
+        /* Hero */
+        .hero { background: #0B2345; color: white; padding: 80px 20px 120px; text-align: left; }
+        .hero-container { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .hero h1 { font-size: 52px; line-height: 1.1; color: white; margin-bottom: 20px; }
+        .hero p { font-size: 18px; color: #F8FAFC; max-width: 550px; margin-bottom: 30px; opacity: 0.9; }
+        
+        /* Form Box */
+        .form-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); color: #111827; }
+        .form-box h3 { margin-bottom: 5px; font-size: 24px; }
+        .form-box p { margin-bottom: 25px; color: #475569; font-size: 15px; }
+        input, textarea, select { width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #d1d5db; font-family: inherit; font-size: 15px; }
+        input:focus, textarea:focus, select:focus { border-color: #0D5BD7; box-shadow: 0 0 0 3px rgba(13, 91, 215, 0.1); outline: none; }
+        
+        /* Badges */
+        .badges-section { background: #091a33; padding: 40px 20px; text-align: center; color: white; border-top: 1px solid rgba(255,255,255,0.1); }
+        .badges-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+        .badge-item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; color: #F8FAFC; }
+        .badge-icon { font-size: 32px; color: #22C55E; }
+        
+        /* Feature Cards */
+        .cards-section { background: white; }
+        .cards-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .card { padding: 40px; border-radius: 16px; border: 1px solid #F1F5F9; transition: 0.3s; background: #F8FAFC; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 20px; margin-bottom: 12px; }
+        .card p { color: #475569; font-size: 15px; }
+        .card-icon { font-size: 36px; color: #0D5BD7; margin-bottom: 20px; }
+        
+        /* Project Showcase */
+        .showcase-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .project-item { position: relative; border-radius: 16px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .project-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .project-item:hover img { transform: scale(1.05); }
+        .project-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(transparent, rgba(11, 35, 69, 0.95)); color: white; }
+        .project-overlay h4 { color: white; font-size: 16px; margin-bottom: 3px; font-weight: 700; }
+        .project-overlay p { font-size: 13px; opacity: 0.9; }
+        
+        /* Reviews Section */
+        .reviews-section { background: #F8FAFC; }
+        .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
+        .review-card { background: white; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; }
+        .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .reviewer-info h4 { font-size: 16px; color: #0B2345; font-weight: 700; }
+        .reviewer-info span { font-size: 13px; color: #475569; }
+        .stars { color: #F59E0B; font-size: 16px; letter-spacing: 1px; }
+        .review-text { color: #334155; font-size: 14.5px; line-height: 1.6; font-style: italic; margin-bottom: 15px; flex-grow: 1; }
+        .review-screenshot { width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid #EDF2F7; max-height: 180px; object-fit: contain; background: #fafafa; }
+        
+        /* Meet the Team */
+        .team-section { background: white; }
+        .team-container { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+        .team-pills { margin-bottom: 20px; justify-content: flex-start; }
+        .team-photo-stack { position: relative; height: 450px; }
+        .team-photo { position: absolute; width: 70%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 4px solid white; object-fit: cover; }
+        .team-photo.one { top: 0; left: 0; height: 350px; z-index: 2; }
+        .team-photo.two { bottom: 0; right: 0; height: 300px; z-index: 1; }
+        
+        /* Truck Callout */
+        .truck-callout { background: #0B2345; color: white; padding: 60px 20px; border-radius: 20px; margin-top: 60px; display: flex; align-items: center; gap: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .truck-photo { width: 350px; border-radius: 12px; object-fit: cover; }
+        .truck-callout-content { flex: 1; text-align: left; }
+        .truck-callout-content h3 { color: white; font-size: 28px; margin-bottom: 10px; }
+        .truck-callout-content p { color: #F8FAFC; opacity: 0.9; font-size: 16px; }
+        
+        /* Footer */
+        .footer { background: #091a33; color: #9ca3af; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-logo { font-size: 24px; font-weight: 800; color: white; text-decoration: none; margin-bottom: 15px; display: block; }
+        .footer p { margin-bottom: 8px; font-size: 14px; }
+        
+        /* Responsive */
+        @media(max-width: 992px){
+            .hero-container, .team-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero p, .hero h1, .team-content p { margin-left: auto; margin-right: auto; text-align: center; }
+            .hero h1 { font-size: 42px; }
+            .hero-container { padding-bottom: 50px; }
+            .form-box { max-width: 550px; margin: auto; }
+            .team-photo-stack { height: 350px; max-width: 500px; margin: auto; }
+            .truck-callout { flex-direction: column; text-align: center; gap: 30px; }
+            .truck-photo { width: 100%; max-width: 400px; }
+            .truck-callout-content { text-align: center; }
+            .section { padding: 70px 20px; }
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<div class="container nav">
-<a href="#" class="logo">Cluck Plumbing LLC</a>
-<a href="tel:+14797893138" class="btn blue">☎ (479) 789-3138</a>
-</div>
-</header>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Cluck Plumbing</a>
+        <a href="tel:4797893138" class="btn btn-call">📞 Call Now</a>
+    </div>
+</nav>
 
 <section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="badge">Family-owned plumbing service in Northwest Arkansas</div>
-<h1>Plumbing done right, not just done fast.</h1>
-<p>Reliable plumbing repairs, remodel support, water service installation, drain cleaning, and fixture upgrades backed by clean workmanship and a perfect inspection record.</p>
-
-<div class="actions">
-<a href="tel:+14797893138" class="btn green">Call Now</a>
-<a href="#quote" class="btn white">Request a Free Quote</a>
-</div>
-
-<div class="stats">
-<div class="stat"><strong>100%</strong>Recommended</div>
-<div class="stat"><strong>0</strong>Failed Inspections</div>
-<div class="stat"><strong>NWA</strong>Local Service</div>
-</div>
-</div>
-
-<div class="hero-card">
-<img src="assets/Niko license.jpg" alt="Licensed master plumber">
-</div>
-</div>
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="pill" style="margin-bottom: 15px;">Local Northwest Arkansas Plumber</span>
+            <h1>Plumbing Done Right. Guaranteed.</h1>
+            <p>Reliable, high-quality plumbing services focused on clean workmanship, honest communication, and long-term results that never fail inspection.</p>
+            <div class="flex team-pills" style="justify-content: flex-start; gap: 10px;">
+                <span class="pill" style="background:#F8FAFC; color:#0B2345;">Family Owned</span>
+                <span class="pill" style="background:#F8FAFC; color:#0B2345;">100% Recommended</span>
+                <span class="pill" style="background:#F8FAFC; color:#0B2345;">Inspection Ready</span>
+            </div>
+        </div>
+        <div class="hero-form">
+            <form class="form-box" action="https://formspree.io/f/cluckplumbingllc@gmail.com" method="POST">
+                <h3>Request a Free Quote</h3>
+                <p>Tell us about your project and we’ll get back to you fast.</p>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <select name="service_type" required>
+                    <option value="" disabled selected>Service Needed...</option>
+                    <option value="remodel">Remodel / Conversion</option>
+                    <option value="water_heater">Water Heater Installation</option>
+                    <option value="repair">Plumbing Repair</option>
+                    <option value="other">Other Service</option>
+                </select>
+                <textarea name="message" rows="3" placeholder="Project details..."></textarea>
+                <button type="submit" class="btn btn-form">Submit Request</button>
+            </form>
+        </div>
+    </div>
 </section>
 
-<section class="light">
-<div class="container">
-<div class="section-head">
-<h2>Why homeowners call Cluck</h2>
-<p>Local homeowners choose Cluck Plumbing for honest communication, careful workmanship, and reliable service that holds up long after the job is done.</p>
-</div>
-
-<div class="grid">
-<div class="card">
-<h3>Never failed an inspection</h3>
-<p>Every project is approached with the right prep, standards, and attention to code.</p>
-</div>
-
-<div class="card">
-<h3>Highly recommended locally</h3>
-<p>Customers consistently mention professionalism, fair pricing, communication, and clean results.</p>
-</div>
-
-<div class="card">
-<h3>Family-owned care</h3>
-<p>Serving Northwest Arkansas with the kind of pride and accountability only a local team brings.</p>
-</div>
-</div>
-</div>
+<section class="badges-section">
+    <div class="badges-container">
+        <div class="badge-item"><span class="badge-icon">✓</span>Never Failed Inspection</div>
+        <div class="badge-item"><span class="badge-icon">✓</span>Family Owned & Operated</div>
+        <div class="badge-item"><span class="badge-icon">✓</span>Licensed & Insured</div>
+        <div class="badge-item"><span class="badge-icon">✓</span>Northwest Arkansas Local</div>
+    </div>
 </section>
 
-<section>
-<div class="container">
-<div class="section-head">
-<h2>Plumbing services for homes and remodels</h2>
-<p>From urgent repairs to full remodel plumbing, Cluck Plumbing handles the details that keep your home running right.</p>
-</div>
-
-<div class="grid">
-<div class="card"><h3>Custom Shower Installation</h3><p>Tub-to-walk-in shower conversions, shower valves, fixtures, cartridges, and clean finish work.</p></div>
-<div class="card"><h3>Bathroom Remodel Plumbing</h3><p>Plumbing layout support, fixture installation, drain relocation, and corrected previous work.</p></div>
-<div class="card"><h3>Toilet Repair & Flange Replacement</h3><p>Toilet installs, flange replacement, leak prevention, and structural issue correction.</p></div>
-<div class="card"><h3>Water Heater Upgrades</h3><p>Electric and hot water heater replacements, upgrades, and capacity improvements.</p></div>
-<div class="card"><h3>Main Water Service Installation</h3><p>Expert installation of long-run water service lines, including 500 linear feet of 1¼″ main water service.</p></div>
-<div class="card"><h3>Drain Cleaning & Plumbing Repairs</h3><p>Kitchen sink unclogging, tub waste and overflow replacement, gas line moves, and general repairs.</p></div>
-</div>
-</div>
+<section class="section cards-section">
+    <h2>Our Process Ensures Quality</h2>
+    <p class="section-subtitle">We refuse to cut corners. We focus strictly on doing things the right way—not just the fastest way.</p>
+    <div class="grid cards-grid">
+        <div class="card">
+            <div class="card-icon">1</div>
+            <h3>Attention to Detail</h3>
+            <p>Every single project is completed with extreme care, precision, and long-term structural reliability in mind.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">2</div>
+            <h3>Honest Communication</h3>
+            <p>From permit pulls to cleanup, we keep you informed every single step of the project with zero surprise fees.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">3</div>
+            <h3>Long-Term Results</h3>
+            <p>Our work is built to last and guaranteed to pass all code inspections, giving you permanent peace of mind.</p>
+        </div>
+    </div>
 </section>
 
-<section class="light">
-<div class="container feature">
-<img src="assets/shower head.jpg" alt="Custom shower installation">
-
-<div>
-<h2>Quality work you can see before you even call.</h2>
-<p>Cluck Plumbing’s project photos show the kind of detail homeowners care about: clean installs, precise alignment, durable replacements, and finished work that looks professional.</p>
-
-<p class="check"><strong>✓ Clean workmanship:</strong> Finished fixtures, showers, toilets, and sinks are handled with care.</p>
-<p class="check"><strong>✓ Problem-solving approach:</strong> Repairs are made to fix the real issue, not just the visible symptom.</p>
-<p class="check"><strong>✓ Honest local service:</strong> Customers describe the team as professional, fair, straightforward, and easy to work with.</p>
-</div>
-</div>
+<section class="section">
+    <h2>Northwest Arkansas Best Projects</h2>
+    <p class="section-subtitle">Real on-the-job completions by the Cluck Plumbing team.</p>
+    <div class="grid showcase-grid">
+        <div class="project-item">
+            <img src="bathroom.jpg" alt="Custom bathroom shower installation">
+            <div class="project-overlay">
+                <h4>Custom Shower Installation</h4>
+                <p>Design & Build Remodel</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="main water service.jpg" alt="Large scale water service installation">
+            <div class="project-overlay">
+                <h4>Main Water Service</h4>
+                <p>500 LF Expertly Installed</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="wood sink.jpg" alt="Sink drain relocation and functionality update">
+            <div class="project-overlay">
+                <h4>Sink Drain Functionality</h4>
+                <p>Precision Relocation Update</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="bathtub.jpg" alt="Finished walk-in shower conversion project">
+            <div class="project-overlay">
+                <h4>Walk-In Shower Conversion</h4>
+                <p>Tub Replacement Upgrade</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section>
-<div class="container">
-<div class="section-head">
-<h2>Recent Work</h2>
-<p>A look at remodel plumbing, fixture installs, water service, repairs, and finished projects across Northwest Arkansas.</p>
-</div>
+<section class="section reviews-section">
+    <h2>What Your NWA Neighbors Say</h2>
+    <p class="section-subtitle">Read verified customer reviews from home and business owners across Northwest Arkansas.</p>
+    
+    <div class="grid reviews-grid">
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Reagan Snyder</h4>
+                    <span>Homeowner Review</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Hands down the BEST plumber we’ve ever worked with! From start to finish, Nick was professional, prompt, and incredibly skilled. What really stood out was his attention to detail — he didn’t just do a quick fix; he made sure everything was working perfectly and up to code. He left the space cleaner than he found it..."</p>
+            <img src="review 1.png" alt="Reagan Snyder Review" class="review-screenshot">
+        </div>
 
-<div class="gallery">
-<div class="project large"><img src="assets/bathtub.jpg"><div class="label">Bathroom Remodel Plumbing</div></div>
-<div class="project"><img src="assets/shower.jpg"><div class="label">Walk-In Shower Conversion</div></div>
-<div class="project"><img src="assets/gold sink.jpg"><div class="label">Premium Sink Fixtures</div></div>
-<div class="project"><img src="assets/main water service.jpg"><div class="label">Main Water Service</div></div>
-<div class="project"><img src="assets/wood sink.jpg"><div class="label">Kitchen Sink Installation</div></div>
-<div class="project"><img src="assets/toilet.jpg"><div class="label">Toilet Replacement</div></div>
-<div class="project"><img src="assets/green sink.jpg"><div class="label">Drain Relocation</div></div>
-<div class="project"><img src="assets/sink.jpg"><div class="label">Sink Fixtures</div></div>
-<div class="project"><img src="assets/white toilet.jpg"><div class="label">Bathroom Fixture Work</div></div>
-<div class="project"><img src="assets/bathroom.jpg"><div class="label">Finished Bathroom Remodel</div></div>
-<div class="project"><img src="assets/owner working.jpg"><div class="label">On-Site Plumbing Work</div></div>
-<div class="project"><img src="assets/employee.jpg"><div class="label">Commercial Plumbing Support</div></div>
-</div>
-</div>
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Carina Perez-Anita</h4>
+                    <span>Bathroom Remodel Customer</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Nik did a fantastic job with the plumbing of our new bathroom! He was always communicating, reliable, and professional throughout the whole process. Everything works perfectly, and his attention to detail really shows. Highly recommend!"</p>
+            <img src="review 2.png" alt="Carina Perez-Anita Review" class="review-screenshot">
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Ryan Siebenmorgen</h4>
+                    <span>Lateral & Meter Work</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Nik did a great job helping me get hooked up to the meter and running my laterals. Fair price, honest work. Would recommend and will use again."</p>
+            <img src="review 3.png" alt="Ryan Siebenmorgen Review" class="review-screenshot">
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Edwin Figueroa</h4>
+                    <span>Permit Pull & Correction</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"What a great experience with this family owned company! Nik handled everything—from pulling the permit to plumbing our new bathroom and he corrected items that was done incorrectly by previous plumber."</p>
+            <img src="review 4.png" alt="Edwin Figueroa Review" class="review-screenshot">
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Blake Farar</h4>
+                    <span>Waypoint Marine (Commercial)</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Nik came out to Waypoint Marine yesterday and replaced our water heater. He did a fantastic job!! 10/10 recommend"</p>
+            <img src="review 5.png" alt="Blake Farar Review" class="review-screenshot">
+        </div>
+    </div>
 </section>
 
-<section class="light">
-<div class="container">
-<div class="section-head">
-<h2>Recommended by local customers</h2>
-<p>Real customer feedback from homeowners who trusted Cluck Plumbing with repairs, remodels, water heaters, drains, and bathroom projects.</p>
-</div>
-
-<div class="reviews">
-<div class="review-card"><img src="assets/review 1.png" alt="Customer review"></div>
-<div class="review-card"><img src="assets/review 2.png" alt="Customer review"></div>
-<div class="review-card"><img src="assets/review 3.png" alt="Customer review"></div>
-<div class="review-card"><img src="assets/review 4.png" alt="Customer review"></div>
-</div>
-</div>
+<section class="section team-section">
+    <div class="team-container">
+        <div class="team-content" style="text-align: left;">
+            <div class="flex team-pills">
+                <span class="pill">Northwest Arkansas Proud</span>
+                <span class="pill">Licensed & Insured</span>
+            </div>
+            <h2>Meet the Cluck Plumbing Team</h2>
+            <p style="color: #475569; margin-bottom: 25px;">When you call Cluck Plumbing, you're not getting a random subcontractor. You are getting us—a dedicated, expert team from your local NWA community, committed to quality.</p>
+            <p style="color: #475569; margin-bottom: 30px;">We show up smiling, work efficiently, and leave our worksite cleaner than we found it. We are the trusted local face of professional plumbing in Northwest Arkansas.</p>
+            <a href="tel:4797893138" class="btn btn-call">📞 Tap to Call (479) 789-3138</a>
+        </div>
+        <div class="team-photo-stack">
+            <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo one">
+            <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo two">
+        </div>
+    </div>
 </section>
 
-<section class="cta" id="quote">
-<div class="container cta-wrap">
-<div>
-<h2>Need plumbing done right?</h2>
-<p>Call Cluck Plumbing LLC for reliable plumbing service across Northwest Arkansas. Whether it’s a repair, remodel, water heater, drain issue, or fixture upgrade, the team is ready to help.</p>
-
-<div class="actions">
-<a href="tel:+14797893138" class="btn green">Call (479) 789-3138</a>
-<a href="mailto:cluckplumbingllc@gmail.com" class="btn white">Email Cluck Plumbing</a>
-</div>
-</div>
-
-<form action="mailto:cluckplumbingllc@gmail.com" method="post" enctype="text/plain">
-<h3>Request a free quote</h3>
-<input type="text" name="Name" placeholder="Full Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-<input type="email" name="Email" placeholder="Email Address">
-
-<select name="Service">
-<option value="">What do you need help with?</option>
-<option>Bathroom remodel plumbing</option>
-<option>Custom shower installation</option>
-<option>Toilet repair or replacement</option>
-<option>Water heater upgrade</option>
-<option>Drain cleaning or unclogging</option>
-<option>Main water service</option>
-<option>Gas line assistance</option>
-<option>Other plumbing repair</option>
-</select>
-
-<textarea name="Message" placeholder="Tell us about your plumbing project..."></textarea>
-<button class="btn green" type="submit">Submit Request</button>
-</form>
-</div>
+<section class="section text-center" style="padding-top: 0;">
+    <div class="truck-callout">
+        <img src="clucking car.jpg" alt="Official Cluck Plumbing service truck" class="truck-photo">
+        <div class="truck-callout-content">
+            <h3>When you see this truck, help is here.</h3>
+            <p>Our fully stocked service vehicles arrive ready to handle any plumbing need—from flange replacement to main water line installs—fast, professionally, and always code-compliant.</p>
+        </div>
+    </div>
 </section>
 
-<footer>
-<div class="container">
-<h3>Cluck Plumbing LLC</h3>
-<p>Family-owned business proudly serving all of Northwest Arkansas.</p>
-<p><strong>Phone:</strong> (479) 789-3138 | <strong>Email:</strong> cluckplumbingllc@gmail.com</p>
-<p>© 2026 Cluck Plumbing LLC. All rights reserved.</p>
-</div>
+<footer class="footer">
+    <a href="#" class="footer-logo">Cluck Plumbing LLC</a>
+    <p>Family owned business proudly serving all of Northwest Arkansas!</p>
+    <p><strong>Email:</strong> cluckplumbingllc@gmail.com</p>
+    <p style="margin-top: 15px; color: white; font-weight: 700;">📞 479-789-3138</p>
+    <p style="margin-top: 25px; font-size: 12px; color: #4b5563;">&copy; 2026 Cluck Plumbing LLC. All rights reserved.</p>
 </footer>
 
 </body>
