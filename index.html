@@ -27,13 +27,16 @@
         .grid { display: grid; gap: 30px; }
         .section { max-width: 1200px; margin: auto; padding: 100px 20px; }
         .text-center { text-align: center; }
-        .flex { display: flex; gap: 15px; flex-wrap: wrap; }
+        .flex { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
         
         /* Buttons & Pills */
         .btn { border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
         
         .btn-nav-call { background: #22C55E; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2); }
         .btn-nav-call:hover { background: #16a34a; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3); }
+        
+        .btn-nav-fb { background: #1877F2; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(24, 119, 242, 0.2); }
+        .btn-nav-fb:hover { background: #145dbf; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(24, 119, 242, 0.3); }
         
         .btn-call { background: #22C55E; color: white; padding: 16px 32px; font-size: 16px; }
         .btn-call:hover { background: #16a34a; }
@@ -56,8 +59,9 @@
         
         /* Navigation */
         .navbar { background: white; padding: 18px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border-bottom: 1px solid #E2E8F0; }
-        .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .logo { font-weight: 800; font-size: 24px; color: #0B2345; text-decoration: none; letter-spacing: -0.5px; }
+        .nav-actions { display: flex; gap: 12px; align-items: center; }
         
         /* Hero */
         .hero { background: #0B2345; color: white; padding: 80px 20px 120px; text-align: left; }
@@ -96,14 +100,14 @@
         .project-overlay h4 { color: white; font-size: 16px; margin-bottom: 3px; font-weight: 700; }
         .project-overlay p { font-size: 13px; opacity: 0.9; }
         
-        /* CSS FLEXBOX COLUMN WRAP LAYOUT (REVIEWS FIXED) */
+        /* CSS FLEXBOX COLUMN WRAP LAYOUT */
         .reviews-section { background: #F8FAFC; }
         .reviews-flex-wrap { 
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             align-content: space-between;
-            height: 1250px; /* Determines container limits to wrap columns flawlessly */
+            height: 1250px; 
             max-width: 1200px; 
             margin: 0 auto;
         }
@@ -113,7 +117,7 @@
             border-radius: 16px; 
             border: 1px solid #E2E8F0; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.02); 
-            width: 32%; /* Fits exactly 3 vertical stacked chains across */
+            width: 32%; 
             margin-bottom: 24px;
         }
         .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
@@ -140,9 +144,12 @@
         .footer { background: #091a33; color: #9ca3af; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-logo { font-size: 24px; font-weight: 800; color: white; text-decoration: none; margin-bottom: 15px; display: block; }
         .footer p { margin-bottom: 8px; font-size: 14px; }
+        .footer-fb-link { display: inline-flex; align-items: center; gap: 6px; color: #1877F2; text-decoration: none; font-weight: 700; font-size: 15px; margin-top: 15px; transition: color 0.2s; }
+        .footer-fb-link:hover { color: #4392f7; }
         
         /* Responsive Breakpoints */
         @media(max-width: 992px) {
+            .nav-container { justify-content: center; text-align: center; }
             .hero-container, .team-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
             .hero p, .hero h1, .team-content p { margin-left: auto; margin-right: auto; text-align: center; }
             .hero h1 { font-size: 42px; }
@@ -163,7 +170,10 @@
 <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="logo">Cluck Plumbing LLC</a>
-        <a href="tel:4797893138" class="btn btn-nav-call">📞 Call Now</a>
+        <div class="nav-actions">
+            <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="btn btn-nav-fb">📘 Facebook</a>
+            <a href="tel:4797893138" class="btn btn-nav-call">📞 Call Now</a>
+        </div>
     </div>
 </nav>
 
@@ -401,6 +411,7 @@
         <div class="team-photo-column">
             <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
             <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
+            <img src="assets/team working.jpg" alt="Cluck Plumbing crew collaborating at a site" class="team-photo">
         </div>
     </div>
 </section>
@@ -420,6 +431,9 @@
     <p>Family owned business proudly serving all of Northwest Arkansas!</p>
     <p><strong>Email:</strong> cluckplumbingllc@gmail.com</p>
     <p style="margin-top: 15px; color: white; font-weight: 700;">📞 479-789-3138</p>
+    <div>
+        <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="footer-fb-link">📘 Visit Our Facebook Page</a>
+    </div>
     <p style="margin-top: 25px; font-size: 12px; color: #4b5563;">&copy; 2026 Cluck Plumbing LLC. All rights reserved.</p>
 </footer>
 
