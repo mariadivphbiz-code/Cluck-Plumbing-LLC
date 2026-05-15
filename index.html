@@ -32,7 +32,6 @@
         /* Buttons & Pills */
         .btn { border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
         
-        /* Professional Header Call Button */
         .btn-nav-call { background: #22C55E; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2); }
         .btn-nav-call:hover { background: #16a34a; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3); }
         
@@ -41,7 +40,6 @@
         .btn-form { background: #0D5BD7; color: white; width: 100%; padding: 16px; margin-top: 20px; font-size: 16px; }
         .btn-form:hover { background: #0041a3; }
         
-        /* Hero Top Badge Style */
         .hero-badge { 
             display: inline-block;
             background: rgba(255, 255, 255, 0.12); 
@@ -89,7 +87,7 @@
         .card p { color: #475569; font-size: 15px; }
         .card-icon { font-size: 36px; color: #0D5BD7; margin-bottom: 20px; }
         
-        /* Project Showcase Grid Layout */
+        /* Project Showcase Layout */
         .showcase-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
         .project-item { position: relative; border-radius: 16px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); background: #E2E8F0; }
         .project-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; display: block; }
@@ -98,11 +96,14 @@
         .project-overlay h4 { color: white; font-size: 16px; margin-bottom: 3px; font-weight: 700; }
         .project-overlay p { font-size: 13px; opacity: 0.9; }
         
-        /* Advanced Premium Masonry Review Layout */
+        /* CSS FLEXBOX COLUMN WRAP LAYOUT (REVIEWS FIXED) */
         .reviews-section { background: #F8FAFC; }
-        .reviews-container { 
-            column-count: 3; 
-            column-gap: 25px; 
+        .reviews-flex-wrap { 
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 1250px; /* Determines container limits to wrap columns flawlessly */
             max-width: 1200px; 
             margin: 0 auto;
         }
@@ -112,10 +113,8 @@
             border-radius: 16px; 
             border: 1px solid #E2E8F0; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.02); 
-            display: inline-block;
-            width: 100%;
-            margin-bottom: 25px;
-            break-inside: avoid;
+            width: 32%; /* Fits exactly 3 vertical stacked chains across */
+            margin-bottom: 24px;
         }
         .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
         .reviewer-info h4 { font-size: 16px; color: #0B2345; font-weight: 700; line-height: 1.2; }
@@ -123,7 +122,7 @@
         .stars { color: #F59E0B; font-size: 15px; letter-spacing: 1px; }
         .review-text { color: #334155; font-size: 14.5px; line-height: 1.6; font-style: italic; margin: 0; padding: 0; }
         
-        /* Fixed Meet the Team Photo Layout */
+        /* Meet the Team Layout */
         .team-section { background: white; }
         .team-container { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
         .team-pills { margin-bottom: 20px; justify-content: flex-start; }
@@ -142,8 +141,8 @@
         .footer-logo { font-size: 24px; font-weight: 800; color: white; text-decoration: none; margin-bottom: 15px; display: block; }
         .footer p { margin-bottom: 8px; font-size: 14px; }
         
-        /* Responsive Styling */
-        @media(max-width: 992px){
+        /* Responsive Breakpoints */
+        @media(max-width: 992px) {
             .hero-container, .team-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
             .hero p, .hero h1, .team-content p { margin-left: auto; margin-right: auto; text-align: center; }
             .hero h1 { font-size: 42px; }
@@ -153,11 +152,9 @@
             .truck-photo { width: 100%; max-width: 400px; }
             .truck-callout-content { text-align: center; }
             .section { padding: 70px 20px; }
-            .reviews-container { column-count: 2; }
+            .reviews-flex-wrap { height: auto; flex-direction: column; }
+            .review-card { width: 100%; }
             .team-photo { height: 260px; }
-        }
-        @media(max-width: 640px){
-            .reviews-container { column-count: 1; }
         }
     </style>
 </head>
@@ -176,7 +173,7 @@
             <div class="hero-badge">Local Northwest Arkansas Plumber</div>
             <h1>Plumbing Done Right. Guaranteed.</h1>
             <p>Reliable, high-quality plumbing services focused on clean workmanship, honest communication, and long-term results that never fail inspection.</p>
-            <div class="flex team-pills" style="justify-content: flex-start; gap: 10px;">
+            <div class="flex team-pills">
                 <span class="pill" style="background:#F8FAFC; color:#0B2345;">Family Owned</span>
                 <span class="pill" style="background:#F8FAFC; color:#0B2345;">100% Recommended</span>
                 <span class="pill" style="background:#F8FAFC; color:#0B2345;">Inspection Ready</span>
@@ -239,14 +236,14 @@
     <p class="section-subtitle">Real on-the-job completions by the Cluck Plumbing team.</p>
     <div class="grid showcase-grid">
         <div class="project-item">
-            <img src="assets/bathroom.jpg" alt="Custom bathroom shower installation">
+            <img src="bathroom.jpg" alt="Custom bathroom shower installation">
             <div class="project-overlay">
                 <h4>Custom Shower Installation</h4>
                 <p>Design & Build Remodel</p>
             </div>
         </div>
         <div class="project-item">
-            <img src="assets/main water service.jpg" alt="Large scale water service installation">
+            <img src="main water service.jpg" alt="Large scale water service installation">
             <div class="project-overlay">
                 <h4>Main Water Service</h4>
                 <p>500 LF Expertly Installed</p>
@@ -260,7 +257,7 @@
             </div>
         </div>
         <div class="project-item">
-            <img src="assets/bathtub.jpg" alt="Finished walk-in shower conversion project">
+            <img src="bathtub.jpg" alt="Finished walk-in shower conversion project">
             <div class="project-overlay">
                 <h4>Walk-In Shower Conversion</h4>
                 <p>Tub Replacement Upgrade</p>
@@ -287,7 +284,7 @@
     <h2>What Your NWA Neighbors Say</h2>
     <p class="section-subtitle">Read verified customer reviews from home and business owners across Northwest Arkansas.</p>
     
-    <div class="reviews-container">
+    <div class="reviews-flex-wrap">
         <div class="review-card">
             <div class="review-header">
                 <div class="reviewer-info">
@@ -297,28 +294,6 @@
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
             <p class="review-text">"I had a backed-up kitchen sink and called Cluck Plumbing — they were quick, professional, and got everything flowing again fast. What really stood out was how easy they were to work with. Honest, straightforward service. It’s hard to find people who show up, do the job right, and make the whole process stress-free — but they absolutely delivered"</p>
-        </div>
-
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-info">
-                    <h4>Priscilla Harrison-Etheredge</h4>
-                    <span>Verified Customer</span>
-                </div>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <p class="review-text">"Nik Pinalto is polite, professional, and personable. More importantly, though he is the ultimate patriot having served in the military. Stellar customer service. We can’t say enough good things about this gentleman. Cluck Plumbing LLC is a 5 star organization."</p>
-        </div>
-
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-info">
-                    <h4>Justin Ridpath</h4>
-                    <span>Verified Customer</span>
-                </div>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <p class="review-text">"awesome work and great prices"</p>
         </div>
 
         <div class="review-card">
@@ -335,28 +310,6 @@
         <div class="review-card">
             <div class="review-header">
                 <div class="reviewer-info">
-                    <h4>Carina Perez-Anita</h4>
-                    <span>Verified Customer</span>
-                </div>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <p class="review-text">"Nik did a fantastic job with the plumbing of our new bathroom! He was always communicating, reliable, and professional throughout the whole process. Everything works perfectly, and his attention to detail really shows. Highly recommend!"</p>
-        </div>
-
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-info">
-                    <h4>Gary Sutherland</h4>
-                    <span>Verified Customer</span>
-                </div>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <p class="review-text">"Ive had a couple jobs done by Cluck Plumbing. He’s always professional, always on time, always fair pricing and the communication is great! I highly recommend using Cluck Plumbing LLC for ALL plumbing needs!"</p>
-        </div>
-
-        <div class="review-card">
-            <div class="review-header">
-                <div class="reviewer-info">
                     <h4>Ryan Siebenmorgen</h4>
                     <span>Verified Customer</span>
                 </div>
@@ -368,12 +321,56 @@
         <div class="review-card">
             <div class="review-header">
                 <div class="reviewer-info">
+                    <h4>Priscilla Harrison-Etheredge</h4>
+                    <span>Verified Customer</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Nik Pinalto is polite, professional, and personable. More importantly, though he is the ultimate patriot having served in the military. Stellar customer service. We can’t say enough good things about this gentleman. Cluck Plumbing LLC is a 5 star organization."</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Carina Perez-Anita</h4>
+                    <span>Verified Customer</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Nik did a fantastic job with the plumbing of our new bathroom! He was always communicating, reliable, and professional throughout the whole process. Everything works perfectly, and his attention to detail really shows. Highly recommend!"</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
                     <h4>Blake Farar</h4>
                     <span>Verified Customer</span>
                 </div>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
             <p class="review-text">"Nik came out to Waypoint Marine yesterday and replaced our water heater. He did a fantastic job!! 10/10 recommend"</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Justin Ridpath</h4>
+                    <span>Verified Customer</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"awesome work and great prices"</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <h4>Gary Sutherland</h4>
+                    <span>Verified Customer</span>
+                </div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">"Ive had a couple jobs done by Cluck Plumbing. He’s always professional, always on time, always fair pricing and the communication is great! I highly recommend using Cluck Plumbing LLC for ALL plumbing needs!"</p>
         </div>
 
         <div class="review-card">
@@ -402,15 +399,15 @@
             <a href="tel:4797893138" class="btn btn-call">📞 Tap to Call (479) 789-3138</a>
         </div>
         <div class="team-photo-column">
-            <img src="assets/owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
-            <img src="assets/employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
+            <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
+            <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
         </div>
     </div>
 </section>
 
 <section class="section text-center" style="padding-top: 0;">
     <div class="truck-callout">
-        <img src="assets/clucking car.jpg" alt="Official Cluck Plumbing service truck" class="truck-photo">
+        <img src="clucking car.jpg" alt="Official Cluck Plumbing service truck" class="truck-photo">
         <div class="truck-callout-content">
             <h3>When you see this truck, help is here.</h3>
             <p>Our fully stocked service vehicles arrive ready to handle any plumbing need—from flange replacement to main water line installs—fast, professionally, and always code-compliant.</p>
