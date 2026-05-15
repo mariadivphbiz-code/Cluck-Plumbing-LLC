@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluck Plumbing LLC | Northwest Arkansas Plumber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9fafb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .navbar {
+            background: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0b2240;
+            text-decoration: none;
+        }
+        .nav-phone {
+            background: #0052cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .hero {
+            background: linear-gradient(rgba(11, 34, 64, 0.8), rgba(11, 34, 64, 0.85)),
+            url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            max-width: 650px;
+            margin: 20px auto 35px;
+            font-size: 18px;
+            color: #e5e7eb;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 16px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .primary {
+            background: #22c55e;
+            color: white;
+        }
+        .secondary {
+            background: white;
+            color: #0b2240;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+        .section h2 {
+            font-size: 32px;
+            color: #0b2240;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f3f4f6;
+        }
+        .card h3 {
+            margin-bottom: 12px;
+            color: #0b2240;
+            font-size: 20px;
+        }
+        .card p {
+            color: #4b5563;
+            font-size: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 16px;
+            height: 280px;
+            object-fit: cover;
+        }
+        .dark-cta {
+            background: #0b2240;
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+        .dark-cta h2 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .dark-cta p {
+            color: #93c5fd;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .contact-box {
+            background: white;
+            color: #1f2937;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+        }
+        .contact-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0b2240;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            font-family: inherit;
+            font-size: 15px;
+        }
+        .contact-box .btn {
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: #071426;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        .footer-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        @media(max-width: 768px){
+            .hero h1 { font-size: 36px; }
+            .section { padding: 60px 20px; }
+            .contact-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">Cluck Plumbing</a>
+        <a href="tel:4797893138" class="nav-phone">📞 (479) 789-3138</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Northwest Arkansas Plumbing Done Right</h1>
+    <p>Reliable, high-quality plumbing services focused on clean workmanship, honest communication, and long-term results.</p>
+    <div class="buttons">
+        <a href="tel:4797893138" class="btn primary">Call Now</a>
+        <a href="#quote" class="btn secondary">Request a Quote</a>
+    </div>
+    <div class="badges">
+        <div class="badge">Family-Owned & Operated</div>
+        <div class="badge">100% Recommended</div>
+        <div class="badge">Licensed & Insured</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Why Homeowners Choose Cluck Plumbing</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Attention to Detail</h3>
+            <p>Every single project is completed with extreme care, precision, and long-term structural reliability in mind.</p>
+        </div>
+        <div class="card">
+            <h3>Quality Over Shortcuts</h3>
+            <p>We refuse to cut corners. We focus strictly on doing things the right way—not just the fastest way.</p>
+        </div>
+        <div class="card">
+            <h3>Trusted Local Service</h3>
+            <p>Proudly serving Northwest Arkansas neighbors with dependable, friendly, and honest plumbing solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Our Core Services</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Water Heater Installation</h3>
+            <p>Professional water heater upgrades, maintenance, and replacements optimized for residential homes.</p>
+        </div>
+        <div class="card">
+            <h3>Bathroom & Shower Plumbing</h3>
+            <p>Custom shower installs, modern fixture replacements, and full bathroom remodel plumbing design.</p>
+        </div>
+        <div class="card">
+            <h3>Toilet Repair & Replacement</h3>
+            <p>Toilet installations, complex flange repairs, leak fixes, and structural floor damage prevention.</p>
+        </div>
+        <div class="card">
+            <h3>Residential Plumbing Repairs</h3>
+            <p>General household troubleshooting, pipe repairs, fixture updates, and leak detection maintenance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section gallery">
+    <h2>Recent Projects</h2>
+    <div class="grid">
+        <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1200&auto=format&fit=crop" alt="New clean copper pipe installation">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1200&auto=format&fit=crop" alt="Modern finished bathroom design">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1200&auto=format&fit=crop" alt="High-end shower bathroom fixtures">
+    </div>
+</section>
+
+<section class="dark-cta" id="quote">
+    <h2>Need Plumbing Done Right?</h2>
+    <p>Reach out today for premium, reliable plumbing service anywhere in Northwest Arkansas.</p>
+    <form class="contact-box" action="#" method="POST">
+        <h3>Request a Free Quote</h3>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Tell us about your plumbing project..." required></textarea>
+        <button type="submit" class="btn primary">Submit Request</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="footer-title">Cluck Plumbing LLC</div>
+    <p>Family-owned plumbing service proudly serving Northwest Arkansas.</p>
+    <p style="margin-top: 15px; color: white; font-weight: 600;">📞 479-789-3138</p>
+    <p style="margin-top: 20px; font-size: 12px; color: #4b5563;">&copy; 2026 Cluck Plumbing LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
