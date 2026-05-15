@@ -32,14 +32,14 @@
         /* Buttons & Pills */
         .btn { border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
         
-        .btn-nav-call { background: #22C55E; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2); }
-        .btn-nav-call:hover { background: #16a34a; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3); }
+        .btn-nav-call { background: #046A38; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(4, 106, 56, 0.15); }
+        .btn-nav-call:hover { background: #03522B; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(4, 106, 56, 0.25); }
         
-        .btn-nav-fb { background: #1877F2; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(24, 119, 242, 0.2); }
-        .btn-nav-fb:hover { background: #145dbf; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(24, 119, 242, 0.3); }
+        .btn-nav-fb { background: #0B2345; color: white; padding: 12px 24px; box-shadow: 0 4px 12px rgba(11, 35, 69, 0.15); }
+        .btn-nav-fb:hover { background: #07162C; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(11, 35, 69, 0.25); }
         
-        .btn-call { background: #22C55E; color: white; padding: 16px 32px; font-size: 16px; }
-        .btn-call:hover { background: #16a34a; }
+        .btn-call { background: #046A38; color: white; padding: 16px 32px; font-size: 16px; box-shadow: 0 4px 12px rgba(4, 106, 56, 0.2); }
+        .btn-call:hover { background: #03522B; transform: translateY(-1px); }
         .btn-form { background: #0D5BD7; color: white; width: 100%; padding: 16px; margin-top: 20px; font-size: 16px; }
         .btn-form:hover { background: #0041a3; }
         
@@ -126,12 +126,16 @@
         .stars { color: #F59E0B; font-size: 15px; letter-spacing: 1px; }
         .review-text { color: #334155; font-size: 14.5px; line-height: 1.6; font-style: italic; margin: 0; padding: 0; }
         
-        /* Meet the Team Layout */
+        /* Meet the Team Layout Remodel */
         .team-section { background: white; }
-        .team-container { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
-        .team-pills { margin-bottom: 20px; justify-content: flex-start; }
-        .team-photo-column { display: flex; flex-direction: column; gap: 20px; }
-        .team-photo { width: 100%; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); object-fit: cover; height: 320px; }
+        .team-text-block { max-width: 800px; margin: 0 auto 40px auto; text-align: center; }
+        .team-text-block .team-pills { justify-content: center; margin-bottom: 20px; }
+        .team-text-block p { color: #475569; font-size: 16px; max-width: 700px; margin: 0 auto 15px auto; }
+        .team-grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .team-photo-wrapper { width: 100%; height: 340px; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+        .team-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .team-photo-wrapper.center-bottom { grid-column: span 2; justify-self: center; width: 50%; }
+        .team-cta-container { text-align: center; margin-top: 40px; }
         
         /* Truck Callout */
         .truck-callout { background: #0B2345; color: white; padding: 60px 20px; border-radius: 20px; margin-top: 60px; display: flex; align-items: center; gap: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
@@ -144,14 +148,14 @@
         .footer { background: #091a33; color: #9ca3af; padding: 60px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-logo { font-size: 24px; font-weight: 800; color: white; text-decoration: none; margin-bottom: 15px; display: block; }
         .footer p { margin-bottom: 8px; font-size: 14px; }
-        .footer-fb-link { display: inline-flex; align-items: center; gap: 6px; color: #1877F2; text-decoration: none; font-weight: 700; font-size: 15px; margin-top: 15px; transition: color 0.2s; }
+        .footer-fb-link { display: inline-flex; align-items: center; color: #1877F2; text-decoration: none; font-weight: 700; font-size: 15px; margin-top: 15px; transition: color 0.2s; }
         .footer-fb-link:hover { color: #4392f7; }
         
         /* Responsive Breakpoints */
         @media(max-width: 992px) {
             .nav-container { justify-content: center; text-align: center; }
-            .hero-container, .team-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-            .hero p, .hero h1, .team-content p { margin-left: auto; margin-right: auto; text-align: center; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero p, .hero h1 { margin-left: auto; margin-right: auto; text-align: center; }
             .hero h1 { font-size: 42px; }
             .hero-container { padding-bottom: 50px; }
             .form-box { max-width: 550px; margin: auto; }
@@ -161,7 +165,9 @@
             .section { padding: 70px 20px; }
             .reviews-flex-wrap { height: auto; flex-direction: column; }
             .review-card { width: 100%; }
-            .team-photo { height: 260px; }
+            .team-grid-layout { grid-template-columns: 1fr; gap: 20px; }
+            .team-photo-wrapper { height: 280px; }
+            .team-photo-wrapper.center-bottom { grid-column: span 1; width: 100%; }
         }
     </style>
 </head>
@@ -171,8 +177,8 @@
     <div class="nav-container">
         <a href="#" class="logo">Cluck Plumbing LLC</a>
         <div class="nav-actions">
-            <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="btn btn-nav-fb">📘 Facebook</a>
-            <a href="tel:4797893138" class="btn btn-nav-call">📞 Call Now</a>
+            <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="btn btn-nav-fb">Facebook</a>
+            <a href="tel:4797893138" class="btn btn-nav-call">Call Now</a>
         </div>
     </div>
 </nav>
@@ -397,22 +403,30 @@
 </section>
 
 <section class="section team-section">
-    <div class="team-container">
-        <div class="team-content" style="text-align: left;">
-            <div class="flex team-pills">
-                <span class="pill">Northwest Arkansas Proud</span>
-                <span class="pill">Licensed & Insured</span>
-            </div>
-            <h2>Meet the Cluck Plumbing Team</h2>
-            <p style="color: #475569; margin-bottom: 25px;">When you call Cluck Plumbing, you're not getting a random subcontractor. You are getting us—a dedicated, expert team from your local NWA community, committed to quality.</p>
-            <p style="color: #475569; margin-bottom: 30px;">We show up smiling, work efficiently, and leave our worksite cleaner than we found it. We are the trusted local face of professional plumbing in Northwest Arkansas.</p>
-            <a href="tel:4797893138" class="btn btn-call">📞 Tap to Call (479) 789-3138</a>
+    <div class="team-text-block">
+        <div class="flex team-pills">
+            <span class="pill">Northwest Arkansas Proud</span>
+            <span class="pill">Licensed & Insured</span>
         </div>
-        <div class="team-photo-column">
-            <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently" class="team-photo">
-            <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job" class="team-photo">
-            <img src="assets/team working.jpg" alt="Cluck Plumbing crew collaborating at a site" class="team-photo">
+        <h2>Meet the Cluck Plumbing Team</h2>
+        <p>When you call Cluck Plumbing, you're not getting a random subcontractor. You are getting us—a dedicated, expert team from your local NWA community, committed to quality.</p>
+        <p>We show up smiling, work efficiently, and leave our worksite cleaner than we found it. We are the trusted local face of professional plumbing in Northwest Arkansas.</p>
+    </div>
+    
+    <div class="team-grid-layout">
+        <div class="team-photo-wrapper">
+            <img src="owner working.jpg" alt="Cluck Plumbing team member working diligently">
         </div>
+        <div class="team-photo-wrapper">
+            <img src="employee.jpg" alt="Cluck Plumbing team member smiling on the job">
+        </div>
+        <div class="team-photo-wrapper center-bottom">
+            <img src="assets/team working.jpg" alt="Cluck Plumbing crew collaborating at a site">
+        </div>
+    </div>
+
+    <div class="team-cta-container">
+        <a href="tel:4797893138" class="btn btn-call">Tap to Call (479) 789-3138</a>
     </div>
 </section>
 
@@ -432,7 +446,7 @@
     <p><strong>Email:</strong> cluckplumbingllc@gmail.com</p>
     <p style="margin-top: 15px; color: white; font-weight: 700;">📞 479-789-3138</p>
     <div>
-        <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="footer-fb-link">📘 Visit Our Facebook Page</a>
+        <a href="https://www.facebook.com/profile.php?id=61575702810279" target="_blank" rel="noopener noreferrer" class="footer-fb-link">Visit Our Facebook Page</a>
     </div>
     <p style="margin-top: 25px; font-size: 12px; color: #4b5563;">&copy; 2026 Cluck Plumbing LLC. All rights reserved.</p>
 </footer>
