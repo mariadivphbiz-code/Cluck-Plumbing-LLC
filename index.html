@@ -40,6 +40,20 @@
         .btn-call:hover { background: #16a34a; }
         .btn-form { background: #0D5BD7; color: white; width: 100%; padding: 16px; margin-top: 20px; font-size: 16px; }
         .btn-form:hover { background: #0041a3; }
+        
+        /* Fixed Hero Top Badge Style & Spacing */
+        .hero-badge { 
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12); 
+            color: #FFFFFF; 
+            padding: 8px 18px; 
+            border-radius: 999px; 
+            font-size: 14px; 
+            font-weight: 600; 
+            margin-bottom: 25px; 
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.2px;
+        }
         .pill { background: #475569; color: white; padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; }
         
         /* Navigation */
@@ -76,7 +90,7 @@
         .card-icon { font-size: 36px; color: #0D5BD7; margin-bottom: 20px; }
         
         /* Project Showcase */
-        .showcase-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .showcase-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
         .project-item { position: relative; border-radius: 16px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .project-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
         .project-item:hover img { transform: scale(1.05); }
@@ -84,10 +98,10 @@
         .project-overlay h4 { color: white; font-size: 16px; margin-bottom: 3px; font-weight: 700; }
         .project-overlay p { font-size: 13px; opacity: 0.9; }
         
-        /* Reviews Section - Content-driven height to remove blank gaps */
+        /* Organized Reviews Section Layout (No Empty Space Layout) */
         .reviews-section { background: #F8FAFC; }
         .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; align-items: start; }
-        .review-card { background: white; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); display: block; height: auto; }
+        .review-card { background: white; padding: 30px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); height: fit-content; }
         .review-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
         .reviewer-info h4 { font-size: 16px; color: #0B2345; font-weight: 700; line-height: 1.2; }
         .reviewer-info span { font-size: 13px; color: #64748B; margin-top: 2px; display: inline-block; }
@@ -141,7 +155,7 @@
 <section class="hero">
     <div class="hero-container">
         <div class="hero-content">
-            <span class="pill" style="margin-bottom: 15px;">Local Northwest Arkansas Plumber</span>
+            <div class="hero-badge">Local Northwest Arkansas Plumber</div>
             <h1>Plumbing Done Right. Guaranteed.</h1>
             <p>Reliable, high-quality plumbing services focused on clean workmanship, honest communication, and long-term results that never fail inspection.</p>
             <div class="flex team-pills" style="justify-content: flex-start; gap: 10px;">
@@ -194,10 +208,12 @@
             <h3>Honest Communication</h3>
             <p>From permit pulls to cleanup, we keep you informed every single step of the project with zero surprise fees.</p>
         </div>
-        <div class="card">
-            <div class="card-icon">3</div>
-            <h3>Long-Term Results</h3>
-            <p>Our work is built to last and guaranteed to pass all code inspections, giving you permanent peace of mind.</p>
+        <div class="grid cards-grid">
+            <div class="card">
+                <div class="card-icon">3</div>
+                <h3>Long-Term Results</h3>
+                <p>Our work is built to last and guaranteed to pass all code inspections, giving you permanent peace of mind.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -232,6 +248,20 @@
             <div class="project-overlay">
                 <h4>Walk-In Shower Conversion</h4>
                 <p>Tub Replacement Upgrade</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="green sink.jpg" alt="Green sink installation update">
+            <div class="project-overlay">
+                <h4>Green Sink Update</h4>
+                <p>Energy & Style Refined</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="shower head.jpg" alt="Precision modern shower head installation">
+            <div class="project-overlay">
+                <h4>Precision Shower Head</h4>
+                <p>Reliable & Efficient Work</p>
             </div>
         </div>
     </div>
